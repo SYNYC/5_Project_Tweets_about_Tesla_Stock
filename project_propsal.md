@@ -6,7 +6,7 @@
 ## Question
 
 
-The idea of this project is to predict Telsa stock price movement on Tweets sentimental analysis over Twitter on a short term period.
+The idea of this project is to predict Telsa stock price movement on Tweets sentimental analysis over Twitter on a short term period. 
 
 If we can pick up today’s tweets sentiment analysis directions (positive or negative) for $TSLA which represents Telsa stock to see what people talk about Telsa stock and how people react on its performance as related news or market trend, it can affect the way the stock moves tomorrow. 
 
