@@ -19,17 +19,17 @@ The main idea is to explore the tweets data for short term period range to do un
 
 
 #### Twitter
--  Resource: collected by [Twitter!](www.twitter.com) API Tweepy.
+-  Resource: collected by [Twitter](https://twitter.com) API Tweepy.
 
 -  Date Range: 07/05 -07/13 (since the current API only let user collect the past 6-9 days data so it will be my research date period)
 
 	__Features including:__
 	
-
+<img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/tweets_raw.png">
 
 
 #### Tesla Stock Price
--  Resource: downloaded from [Yahoo Finance](www.yahoo.com)
+-  Resource: downloaded from [Yahoo Finance](https://finance.yahoo.com)
 
 -  Date Range: 07/06 – 07/14 (since our hypothesis is today’s tweets will affect tomorrow stock price so we want to look into the daily stock price data on the next day of each tweets date to monitor the movement)
 
@@ -38,16 +38,11 @@ The main idea is to explore the tweets data for short term period range to do un
 	__Features including:__
 	- Variables: 
 
-		loan amount, employee title, employee length, home ownership, annual income, debt to income ratio, loan purpose, FICO, loan grades from Lending Club, interest rate, installments and address state
-
-	- Target: 
-
-		Loan Status, as whether is charged off or fully paid, will be the target I want to predict if the borrower will repay the loan or default.
+		Date, Open, High, Low, Close, Adj Close, Volumne 
+	
 
 
 
-
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/LoanDictionary.png">
 
 
 
