@@ -21,7 +21,8 @@ The main idea is to explore the tweets data for short term period range to do un
 #### Twitter
 -  Resource: collected by [Twitter](https://twitter.com) API Tweepy.
 
--  Date Range: 07/05 -07/13 (since the current API only let user collect the past 6-9 days data so it will be my research date period)
+-  Date Range: start from 07/12   
+               07/05 -07/13 (since the current API only let user collect the past 6-9 days data so it will be my research date period)
 
 	__Features including:__
 	
