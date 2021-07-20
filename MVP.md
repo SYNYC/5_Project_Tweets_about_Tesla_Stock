@@ -21,7 +21,7 @@ Since tweets are considered as relatively short documents, I chose NMF as my met
 - topic_11: meme stock - influencers account trade ideas - promoting certain stocks - amc, gme
 - topic_12: elon musk tweets activity, solarcity, cybertruck, trial, court  (Tesla bought Solarcity recently)
 - topic_13: TSLA stock personal opinions and feelings
-- topic_14: TSLA stock personal trading ideas - Short > Long
+- topic_14: TSLA stock personal trading ideas - Short > Long ("short" shows up more frequent than "long", means the market is more bearish)
 
 **What do the topics tell you about the overall structure of the data?**
 -  some of topics are noises ( daily alert, promotions, advertisements) but some are useful 
@@ -31,9 +31,11 @@ Since tweets are considered as relatively short documents, I chose NMF as my met
     - retail traders about tesla news
 
 **Next step:**
-1.  do more data cleaning on advertisement tweets to decrease the noises and redo the topic modeling to get clearer topics. 
+1. look into elon musk's tweets content
 
-2. do Kmeans clustering for topic-matrix df 
+2. do more data cleaning on advertisement tweets to decrease the noises and redo the topic modeling to get clearer topics. 
+
+3. do Kmeans clustering for topic-matrix df for topic purpose.
 
 
 ## 2. Sentiment Analysis Score - Vader
