@@ -6,9 +6,9 @@
 ## Question
 
 
-The idea of this project is to predict Telsa stock price movement on Tweets sentimental analysis over Twitter on a short term period. 
+The idea of this project is to monitor Telsa stock price movement on Tweets sentimental analysis over Twitter on a short term period. 
 
-If we can pick up today’s tweets sentiment analysis directions (positive or negative) for $TSLA which represents Telsa stock to see what people talk about Telsa stock and how people react on its performance as related news or market trend, it can affect the way the stock moves tomorrow. 
+If we can pick up today’s tweets sentiment analysis directions (positive or negative) for Tesla to see what people talk about Telsa and how people react on its performance as related news or market trend, it can affect the way the stock moves tomorrow. 
 
 On Twitter, one tweet posted from a single Twitter account can be retweeted many times to share info and influence even more people. The number of followers that the Twitter account has can also be measure of the influence of the tweets since more followers the account has, more influential the tweets can impact the crowd and potentially on stock price.
 
