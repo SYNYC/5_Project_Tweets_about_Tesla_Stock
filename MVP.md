@@ -35,7 +35,7 @@ Since tweets are considered as relatively short documents, I chose NMF as my met
 
 2. do more data cleaning on advertisement tweets to decrease the noises and redo the topic modeling to get clearer topics. 
 
-3. do Kmeans clustering for topic-matrix df for topic purpose.
+3. do Kmeans clustering for topic-matrix df for topic purpose
 
 
 ## 2. Sentiment Analysis Score - Vader
