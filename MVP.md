@@ -31,13 +31,6 @@ Since tweets are considered as relatively short documents, I chose NMF as my met
     - tech chart patterns
     - retail traders about tesla news
 
-**Next step:**
-1. look into elon musk's tweets content
-
-2. do more data cleaning on advertisement tweets to decrease the noises and redo the topic modeling to get clearer topics. 
-   _update_: cut down to 9712 tweets after this cleaning
-
-3. do Kmeans clustering for topic-matrix df for topic purpose
 
 
 ## 2. Sentiment Analysis Score - Vader
@@ -45,16 +38,22 @@ Since tweets are considered as relatively short documents, I chose NMF as my met
 
 The reason I chose NLTK Vader for this part is because Vader has better sense to pick up social media sentiments than other packages. It comes as 4 scores: negative, neutral, positive and compound. For this case, I will focus on compound score to make a scatterplot based on daily average sentiment score.(why did I take compound score, not other scores to analyze? Since neutral tweets do not reflect a positive or negative mood and serve therefore no purpose to this analysis) 
 
-Daily Sentiment Compound Score 
+- a. Daily Sentiment Compound Score 
 <img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/date_sentiment.png">
 
   
-Daily $TSLA price and Sentiment Compound Score
-- Can't see any significant correlation pattern but the sentiment did fall down when the stock price dropped for the first 2 days(7/12-7/14).
-- Sentiment climbed up and down repeatly from 7/15 to 7/19 even though the stock didn't recover during last week.
-- In the end of this observation timeframe, the sentiment hyper somehow boost the confidence of stock holders and we saw the price recovery on 7/20.
+- b. Daily $TSLA price and Sentiment Compound Score
+    - Can't see any significant correlation pattern but the sentiment did fall down when the stock price dropped for the first 2 days(7/12-7/14).
+    - Sentiment climbed up and down repeatly from 7/15 to 7/19 even though the stock didn't recover during last week.
+    - In the end of this observation timeframe, the sentiment hyper somehow boost the confidence of stock holders and we saw the price recovery on 7/20.
 <img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/date_stock_sentiment-two-scales.png">
 
 
 **Next step:**
+1. look into elon musk's tweets content
+
+2. do more data cleaning on advertisement tweets to decrease the noises and redo the topic modeling to get clearer topics. 
+   - _update_: cut down to 9712 tweets after this cleaning
+
+3. do Kmeans clustering for topic-matrix df for topic purpose
 
