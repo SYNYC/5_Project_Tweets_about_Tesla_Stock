@@ -57,3 +57,5 @@ The reason I chose NLTK Vader for this part is because Vader has better sense to
 
 3. do Kmeans clustering for topic-matrix df for topic purpose
 
+4. Check other related tweets than my current keyword "$TSLA" search, for example, check "Tesla" tweets.
+
