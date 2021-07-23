@@ -66,8 +66,8 @@ and remove stopwords by TfidfVectorizer and generate tweet_word_matrix
 1. Twitter API 
 - Tweepy
 
-2. Sklearn 
- - from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS  
+2. Sklearn  
+- from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS  
 - from sklearn.decomposition import NMF
 - from sklearn.cluster import KMeans
 - from sklearn.manifold import TSNE
@@ -131,8 +131,8 @@ some of topics are noises, ( daily alert, promotions, chatrooms) but some are us
 ### 3. Sentiment Analysis & Stock Price
 
 
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/score_0.589.png" width = "450" height = "300" >
+<img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/date_stock_sentiment-two-scales.png" >
 
 ### 4. Kmeans Clustering – plot by TSNE
 
-<img src="https://github.com/SYNYC/4_Project_Loan_Repayment/blob/main/charts/new/xgb5/feat_chart.png" width = "800" height = "750" >
+<img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/Kmeans_cluster_TSNE_plot.png">
