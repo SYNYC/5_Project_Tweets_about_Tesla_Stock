@@ -62,6 +62,8 @@ and remove stopwords by TfidfVectorizer and generate tweet_word_matrix
 
 1.	Kmeans Clustering (used the elbow method to find the best k = 8) on tweet-topic-matrix
 2.	do clustering plot by TSNE instead of PCA and  TruncatedSVD is because the topics number is 8 which is a relatively high number so TSNE is more suitable for this dimensionality reduction.
+3.	t-SNE(T- distributed Stochastic Neighbor Embedding):
+t-SNE is also a method to reduce the dimension. One of the most major differences between PCA and t-SNE is it preserves only local similarities whereas PA preserves large pairwise distance maximize variance.
 
 
 ## Tools
@@ -150,5 +152,5 @@ For Tesla, the correlation between sentiment and stock price was more difficult 
  
 ### 4. Kmeans Clustering & plot by using TSNE
 
-k = 8 so here shows 8 different clusters by colors by 2 dimensions TSNE
+k = 8 so here shows 8 different clusters by colors as plotting by this dimensionality reduction method called TSNE on 2 dimensions.
 <img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/Kmeans_cluster_TSNE_plot.png">
