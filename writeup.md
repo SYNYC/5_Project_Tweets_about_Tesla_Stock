@@ -5,21 +5,24 @@ Sabrina Yang
 
 ## Abstract
 
-The purpose of this project is to help lending institutions to determine which borrowers to lend to. In order to achieve this, I built a model to predict whether a borrower would repay their loan or not. Lenders will loan a principal amount out to borrowers and also charge interest. Once the principal is paid back in full at the end of the loan, the lender will make a significant profit. This is why they would prefer not to risk losing even a single dollar as this can greatly affect their profit. There are many variables and features associated with loans, which can be found on Lending Club’s website. However, I determined that 28 features are most likely to have the largest impact on the model and have analyzed these as such. By building a model that incorporates these features, the lender would be able to quickly discern which borrowers are most likely to repay or not repay their loans. 
+The purpose of this project is to analyze and predict Tesla’s stock price movement based on sentiment analysis of tweets involving the company and its ticker. Tweet sentiment can be directionally positive or negative, and in various magnitudes. By understanding the relationship between tweets and sentiment, we will be able to understand better how Tesla’s stock price might move in subsequent days/hours. On Twitter, one tweet posted from a single Twitter account can be retweeted many times to share info and influence many people. The number of followers that the Twitter account has can also be a measure of the influence of the tweets since the more followers the account has, the more influential the tweets can impact market sentiment and potentially stock price. I explored tweet data in short term periods and performed unsupervised learning including topic modeling on the tweets, in order to interpret the results and how they may relate to stock price movements.
+
 
 ## Design
-The question of whether a client will pay or not can be solved by using supervised learning as a classification tool. Doing a hard prediction will help me predict whether the client will pay or not. The lending institution is concerned about losing any principal at all and so would rather not lend than to lose any money at all. So in this project, recall will be more focused than precision. As such, I took the F2 score as my critical examination tool.
+The project’s design will center around unsupervised learning. I will also perform topic modeling and sentiment analysis as part of the analytical framework. Together, these tools will allow me to gather insights around tweets and the overall impact on stock price.
 
 
 ## Data
 1. Tweets
-It is gathered from [Twitter](https://twitter.com) from 07/11- 07/19. Due to API restriction, I was only able to get this timeframe data and each date I collected for 2000 tweets, and the raw dataset has total18019 tweets info with the features included 
-_['date', 'username', 'description', 'location', 'following', 'followers','totaltweets', 'retweetcount', 'text', 'hashtags']_
-This project can observe short term activities only. 
+
+It is gathered from [Twitter](https://twitter.com) during 07/11- 07/19. Due to Twitter’s API restriction, I was only able to get data in this short timeframe. For each date, I collected 2000 tweets and the raw dataset has a total 18,019 tweets with the features ['date', 'username', 'description', 'location', 'following', 'followers','totaltweets', 'retweetcount', 'text', 'hashtags'].
+This project can observe short-term activities only. 
 
 
 
-2. Tesla Stock Price chart
+2. Tesla Stock Price data
+
+
 It is gathered from [Yahoo Finance](https://finance.yahoo.com/quote/TSLA/). It has columns 
  _['High', 'Low', 'Open', 'Close', 'Volume', 'Adj Close']_
  and for rows it has the certain dates of data I need to match my tweets data. 
@@ -52,13 +55,13 @@ and remove stopwords by TfidfVectorizer and generate tweet_word_matrix
 *Filter Out Noises*
 
 1.	The purpose is to clean advertisement tweets
-2.	Use str.contains() to filter out the tweets contain Chatroom, Sign Up, Daily Alert, etc.
+2.	Use _str.contains()_ to filter out the tweets contain Chatroom, Sign Up, Daily Alert, etc.
 3.	After filtering, the dataset still has 9400 tweets so it’s still a decent amounts.
 
 *Unsupervised Learning*
 
 1.	Kmeans Clustering (used the elbow method to find the best k = 8) on tweet-topic-matrix
-2.	do clustering plot by TSNE since the topics number is 8 and it’s a relatively high number so TSNE is more suitable.
+2.	do clustering plot by TSNE instead of PCA and  TruncatedSVD is because the topics number is 8 which is a relatively high number so TSNE is more suitable for this dimensionality reduction.
 
 
 ## Tools
@@ -89,7 +92,7 @@ and remove stopwords by TfidfVectorizer and generate tweet_word_matrix
 
 ## Summary
 
-### 1. Topic Modeling Results
+### 1. Topic Modeling Results (15 topics)
 
 - topic_0 : Ads - promoting trading alert chatroom 
 - topic_1 : FUD (Fear ,Uncertainty,  Doubt)  # insolvency = bankrupty   # crash, panic
@@ -115,7 +118,7 @@ some of topics are noises, ( daily alert, promotions, chatrooms) but some are us
     - retail traders about tesla news
 
 
-### 2. Top Modeling Results after filtering/cleaning noises
+### 2. Top Modeling Results after filtering/cleaning noises (8 topics)
 
 
 - topic_0: STOCK - Personal trading ideas, but still ads for chatroom and stock tickers
@@ -130,9 +133,22 @@ some of topics are noises, ( daily alert, promotions, chatrooms) but some are us
 
 ### 3. Sentiment Analysis & Stock Price
 
+Sentiment analysis was performed for 2 key words: $TSLA and Tesla. The result was different for both as users discuss $TSLA for stock related tweets while Tesla was used more for discussing the company, the car, and Elon Musk.
 
+For $TSLA, as the sentiment compound score decreased (i.e., more negative in sentiment than prior days), stock price also fell. However, once both sentiment and stock price dropped to lower levels, sentiment became volatile. This makes sense as a drop in Tesla’s stock price tend to bring in the twitter crowd that tries to boost the market by tweeting positive tweets.
+
+**$TSLA**
 <img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/date_stock_sentiment-two-scales.png" >
 
-### 4. Kmeans Clustering – plot by TSNE
 
+
+For Tesla, the correlation between sentiment and stock price was more difficult to discern. Initially, as sentiment rose, Tesla’s stock price dropped. However, towards the end of the period, sentiment dropped and Tesla’s stock price rose. It is likely that since twitter users use the word “Tesla” to discuss the car and other aspects of the company, the correlation with its stock price is lower than would be for the ticker $TSLA.
+
+**Tesla**
+<img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/Tesla_date_stock_sentiment-two-scales.png" >
+ 
+ 
+### 4. Kmeans Clustering & plot by using TSNE
+
+k = 8 so here shows 8 different clusters by colors by 2 dimensions TSNE
 <img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/Kmeans_cluster_TSNE_plot.png">
